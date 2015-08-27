@@ -1,0 +1,37 @@
+/*Alignment css starts*/
+.alignCenter {
+	text-align: center;
+}
+
+/*Alignment css ends*/
+
+
+/*Width css starts*/
+.width-50 {
+	width:50px;
+}
+/*width css ends*/
+
+
+/*specific css starts*/
+.form-control.penaltyPlaceholder::-webkit-input-placeholder { /* WebKit browsers */
+    color: #000;
+    opacity: 0.7;
+}
+.form-control.penaltyPlaceholder:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #000;
+   opacity: 0.7;
+
+   /*opacity:  1;*/
+}
+.form-control.penaltyPlaceholder::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:#000;
+    opacity: 0.7;
+
+   /*opacity:  1;*/
+}
+.form-control.penaltyPlaceholder:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color: #000;
+    opacity: 0.7;
+}
+/*specific css ends*/

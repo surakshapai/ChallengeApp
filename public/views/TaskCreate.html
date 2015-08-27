@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/index.css">
+	</head>
+	<body>
+		<form action="">
+			<div class="form-group">
+				<label for="taskTitle">
+					Title
+				</label>
+				<input type="text" class="form-control" id="taskTitle" placeholder="The title for your task">
+			</div>
+			<div class="form-group">
+				<label for="taskDesc">
+					Description
+				</label>
+				<textarea class="form-control" rows="4"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="penalty">Penalty</label>
+				<input type="text" class="form-control alignCenter width-50 penaltyPlaceholder" id="penalty" placeholder="5">
+			</div>
+			<div class="form-group">
+				<label>Privacy</label>
+				<span id="helpBlock" class="help-block">By default your tasks will be public. You can change it to be private. </span>
+			<div class="radio-inline">
+				<label for="public">
+				<input type="radio" id="public" name="privacy" value="Public" checked>
+				Public</label>
+			</div>
+			<div class="radio-inline">
+				<label for="private">
+					<input type="radio" id="private" name="privacy" value="private">
+					Private
+				</label>
+			</div>
+			</div>
+			<button type="submit" class="btn btn-info">Submit</button>
+		</form>
+	</body>
+</html>
