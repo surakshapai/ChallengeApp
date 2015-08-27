@@ -22,8 +22,8 @@ mongoose.connect(configDB.url); // On heroku, the URl needs to be configured on 
 // Pass passport object first to passport module 
 require('./config/passport')(passport);
 
-app.set('views', __dirname + '/views');
-app.use(express.static(path.join(__dirname + '/views')));
+app.set('views', __dirname + '/piblic/views');
+app.use(express.static(path.join(__dirname + '/public/views')));
 app.use(morgan('dev')); //logs every request to the dev's console
 app.set('view engine', 'html');
 app.use(cookieParser());

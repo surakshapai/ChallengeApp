@@ -2,7 +2,7 @@ var path = require('path');
 module.exports = function(app, passport) {
 	//Home Page 
 	app.get('/', function(request, response){
-		response.sendFile('/views/index.html');
+		response.sendFile('/public/views/index.html');
 		// response.render path.join(__dirname, "/views/index.html")
 	});
 
@@ -13,7 +13,7 @@ module.exports = function(app, passport) {
 
 	//Login Page
 	app.get('/login', function(request, response){
-		response.sendFile(path.join(__dirname,'/views/login.html'));
+		response.sendFile(path.join(__dirname,'/public/views/login.html'));
 	});
 
 	app.post('/login', passport.authenticate('local-login',{
@@ -24,7 +24,7 @@ module.exports = function(app, passport) {
 
 	//Signup Page
 	app.get('/signup', function(request, response){
-		response.sendFile(path.join(__dirname,'/views/signup.html'));
+		response.sendFile(path.join(__dirname,'/public/views/signup.html'));
 		
 	});
 
@@ -37,7 +37,7 @@ module.exports = function(app, passport) {
 	//Show app homepage to only users who have logged in 
 	//isLoggedIn is the function
 	app.get('/loggedinHomePage', isLoggedIn, function(request, response){
-		response.sendFile(path.join(__dirname,'/views/loggedinHomePage.html'), {
+		response.sendFile(path.join(__dirname,'/public/views/loggedinHomePage.html'), {
 			user: request.user //user is retrieved out of the session and passed to Handlebars
 		});
 	});
@@ -84,7 +84,7 @@ module.exports = function(app, passport) {
 
 	// local 
 	app.get('/connect/local', function(request, response){
-		response.sendFile(path.join(__dirname, '/views/connectLocal.html'));
+		response.sendFile(path.join(__dirname, '/public/views/connectLocal.html'));
 	});
 	app.post('/connect/local', passport.authenticate('local-signup', {
 		successRedirect: '/loggedinHomePage',
